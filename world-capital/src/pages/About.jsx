@@ -11,7 +11,17 @@ const About = () => {
 
       <div className='gardient-cards'>
        <div className='card'>
-        <div className='container bg-blue-box'>
+        <div className='container-card bg-blue-box'>
+          <p className='card-title'>India</p>
+          <p className=''>
+            <span className='card-description'>Capital:</span> Delhi
+          </p>
+          <p className=''>
+            <span className='card-description'>Population:</span>14582595
+          </p>
+          <p className=''>
+            <span className='card-description'>Interesting fact</span> We love India
+          </p>
           
         </div>
        </div> 
