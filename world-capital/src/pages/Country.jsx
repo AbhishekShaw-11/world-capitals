@@ -4,12 +4,12 @@ import Loader from "../component/UI/Loader";
 import CountryCard from "../component/Layout/CountryCard";
 const Country = () => {
   const [isPending, startTransition] = useTransition();
-  const [countries, setContries] = useState([]);
+  const [countries, setCountries] = useState([]);
 
   useEffect(() => {
     startTransition(async () => {
       const res = await getCountryData();
-      setContries(res.data);
+      setCountries(res.data);
     });
   }, []);
 
@@ -22,8 +22,8 @@ const Country = () => {
   return (
     <section className="country-section">
       <ul className="grid grid-four-cols">
-        {countries.map((curCountry) => {
-          return <CountryCard country={curCountry} />;
+        {countries.map((curCountry,ind) => {
+          return <CountryCard country={curCountry} key={ind} />;
         })}
       </ul>
     </section>
