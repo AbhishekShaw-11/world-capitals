@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Login from './Component/Login';
+import Profile from './Component/Profile';
+import UserContextProvider from './Context/UserContextProvider';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hii</h1>
-    </div>
+    <UserContextProvider>
+      <h1>Hii</h1>
+      <Login/>
+      <Profile/>
+    </UserContextProvider>
   );
 }
 
